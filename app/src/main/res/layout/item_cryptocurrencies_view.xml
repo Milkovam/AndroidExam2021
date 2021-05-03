@@ -8,19 +8,36 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+
+
     <ImageView
         android:layout_marginLeft="12dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:id="@+id/symbolView"
+        android:id="@+id/iconView"
         android:layout_width="32dp"
         android:layout_height="32dp">
     </ImageView>
 
     <TextView
-        android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@+id/symbolView"
-        android:textSize="20sp"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/iconView"
+        android:layout_alignParentLeft="true"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:textColor="@android:color/black"
+        android:layout_centerVertical="true"
+        tools:text ="symbol"
+        android:id="@+id/symbol"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/iconView"
+        android:textSize="15sp"
         android:textStyle="normal"
         android:textColor="@android:color/black"
         android:layout_centerVertical="true"
@@ -32,15 +49,29 @@
 
     <TextView
         android:id="@+id/textViewCryptoPrice"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textColor="@android:color/black"
         android:textStyle="normal"
         tools:text="priceUsd"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/textViewCryptoCases"
+        android:layout_centerVertical="true"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/percentChange"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:textStyle="normal"
+        tools:text="percent"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="4dp"
-        android:layout_toRightOf="@id/textViewCryptoCases"
+        android:layout_toRightOf="@id/textViewCryptoPrice"
         android:layout_centerVertical="true"
         android:ellipsize="end"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
 </RelativeLayout>
