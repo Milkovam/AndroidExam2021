@@ -1,0 +1,38 @@
+package no.kristiania.myapplication.adapters
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import no.kristiania.myapplication.databinding.ActivityMainBinding
+import no.kristiania.myapplication.databinding.ItemCryptocurrenciesViewBinding
+import no.kristiania.myapplication.models.CryptoCurrencies
+import com.squareup.picasso.Picasso
+
+
+class CryptoCurrenciesListAdapter (private var list: List <CryptoCurrencies>) : RecyclerView.Adapter<CryptoCurrenciesListAdapter.CryptoViewHolder>(){
+    override fun onCreateViewHolder(
+            parent: ViewGroup,
+            viewType: Int): CryptoViewHolder {
+
+        return CryptoViewHolder(ItemCryptocurrenciesViewBinding.inflate(LayoutInflater.from(parent.context)))
+    }
+
+    override fun onBindViewHolder(holder: CryptoCurrenciesListAdapter.CryptoViewHolder, position: Int) {
+       holder.bind(list[position])
+    }
+
+    override fun getItemCount(): Int =list.size
+
+class CryptoViewHolder(private val binding: ItemCryptocurrenciesViewBinding) : RecyclerView.ViewHolder(binding.root){
+
+    fun bind(stats:CryptoCurrencies){
+       Picasso.get().load("https://static.coincap.io/assets/icons/${stats.symbol}/@2x.png").into(binding.symbolView)
+       binding.textViewCryptoCases.text=stats.name
+
+    }
+}
+    fun update(newList: List<CryptoCurrencies>){
+        list =newList
+        notifyDataSetChanged()
+    }
+}
