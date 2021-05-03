@@ -26,7 +26,7 @@ class CryptoCurrenciesListAdapter (private var list: List <CryptoCurrencies>) : 
 class CryptoViewHolder(private val binding: ItemCryptocurrenciesViewBinding) : RecyclerView.ViewHolder(binding.root){
 
     fun bind(stats:CryptoCurrencies){
-       Picasso.get().load("https://static.coincap.io/assets/icons/${stats.symbol}/@2x.png").into(binding.iconView)
+       Picasso.get().load("https://static.coincap.io/assets/icons/${stats.symbol.toLowerCase()}@2x.png").into(binding.iconView)
        binding.textViewCryptoCases.text=stats.name
         binding.textViewCryptoPrice.text="${stats.priceUsd}"
         binding.symbol.text=stats.symbol
