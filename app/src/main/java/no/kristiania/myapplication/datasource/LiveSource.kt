@@ -31,9 +31,6 @@ class LiveSource {
             }
         }
 
-        //Todo 1 call endpoint https://api.coincap.io/v2/assets
-        //Todo 2 Handle the response
-        //TODO 3. Parse the results into list
 
         return  list
 

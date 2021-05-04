@@ -1,5 +1,6 @@
 package no.kristiania.myapplication.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -7,9 +8,10 @@ import no.kristiania.myapplication.databinding.ActivityMainBinding
 import no.kristiania.myapplication.databinding.ItemCryptocurrenciesViewBinding
 import no.kristiania.myapplication.models.CryptoCurrencies
 import com.squareup.picasso.Picasso
+import no.kristiania.myapplication.listeners.OnCryptoClickListener
 
 
-class CryptoCurrenciesListAdapter (private var list: List <CryptoCurrencies>) : RecyclerView.Adapter<CryptoCurrenciesListAdapter.CryptoViewHolder>(){
+class CryptoCurrenciesListAdapter (private var list: List <CryptoCurrencies>,private val onCryptoClickListener: OnCryptoClickListener) : RecyclerView.Adapter<CryptoCurrenciesListAdapter.CryptoViewHolder>(){
     override fun onCreateViewHolder(
             parent: ViewGroup,
             viewType: Int): CryptoViewHolder {
@@ -17,8 +19,14 @@ class CryptoCurrenciesListAdapter (private var list: List <CryptoCurrencies>) : 
         return CryptoViewHolder(ItemCryptocurrenciesViewBinding.inflate(LayoutInflater.from(parent.context)))
     }
 
+
+
     override fun onBindViewHolder(holder: CryptoCurrenciesListAdapter.CryptoViewHolder, position: Int) {
        holder.bind(list[position])
+
+        holder.itemView.setOnClickListener{
+            onCryptoClickListener.onCryptoItemClicked(position)
+        }
     }
 
     override fun getItemCount(): Int =list.size
