@@ -40,6 +40,7 @@ class CryptoViewHolder(private val binding: ItemCryptocurrenciesViewBinding) : R
         binding.symbol.text=stats.symbol
         binding.percentChange.text="${stats.changePercent24Hr}"
 
+
     }
 }
     fun update(newList: List<CryptoCurrencies>){
