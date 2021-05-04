@@ -35,7 +35,7 @@ class CryptoViewHolder(private val binding: ItemCryptocurrenciesViewBinding) : R
 
     fun bind(stats:CryptoCurrencies){
        Picasso.get().load("https://static.coincap.io/assets/icons/${stats.symbol.toLowerCase()}@2x.png").into(binding.iconView)
-       binding.textViewCryptoCases.text=stats.name
+        binding.textViewCryptoCases.text=stats.name
         binding.textViewCryptoPrice.text="${stats.priceUsd}"
         binding.symbol.text=stats.symbol
         binding.percentChange.text="${stats.changePercent24Hr}"
@@ -44,7 +44,7 @@ class CryptoViewHolder(private val binding: ItemCryptocurrenciesViewBinding) : R
     }
 }
     fun update(newList: List<CryptoCurrencies>){
-        list =newList
+        list = newList
         notifyDataSetChanged()
     }
 }

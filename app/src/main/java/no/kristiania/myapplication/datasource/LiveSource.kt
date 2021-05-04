@@ -16,7 +16,7 @@ class LiveSource {
 
         if (response.isSuccessful){
 
-            var data=JSONObject(response.body).getJSONArray("data")
+            var data = JSONObject(response.body).getJSONArray("data")
 
             for (i in 0 until data.length()){
 
