@@ -3,6 +3,7 @@ package no.kristiania.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.ViewModel
 
@@ -28,7 +29,6 @@ class MainActivity : AppCompatActivity(),OnCryptoClickListener {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         listAdapter = CryptoCurrenciesListAdapter(ArrayList<CryptoCurrencies>(),this)
 
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(),OnCryptoClickListener {
     override fun onCryptoItemClicked( position: Int) {
       /*Toast.makeText(this, "currency $position", Toast.LENGTH_LONG).show()*/
       val intent=Intent(this@MainActivity, ScreenFourActivity::class.java)
-     startActivity(intent)
+        startActivity(intent)
 
 
 
