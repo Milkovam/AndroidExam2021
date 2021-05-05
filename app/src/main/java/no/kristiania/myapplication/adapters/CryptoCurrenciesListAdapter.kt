@@ -19,17 +19,22 @@ class CryptoCurrenciesListAdapter (private var list: List <CryptoCurrencies>,pri
         return CryptoViewHolder(ItemCryptocurrenciesViewBinding.inflate(LayoutInflater.from(parent.context)))
     }
 
+    fun giveList(): List<CryptoCurrencies> {
+        return list
+    }
 
 
     override fun onBindViewHolder(holder: CryptoCurrenciesListAdapter.CryptoViewHolder, position: Int) {
        holder.bind(list[position])
 
+
         holder.itemView.setOnClickListener{
             onCryptoClickListener.onCryptoItemClicked(position)
+
         }
     }
 
-    override fun getItemCount(): Int =list.size
+    override fun getItemCount(): Int = list.size
 
 class CryptoViewHolder(private val binding: ItemCryptocurrenciesViewBinding) : RecyclerView.ViewHolder(binding.root){
 

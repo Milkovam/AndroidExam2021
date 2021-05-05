@@ -12,11 +12,11 @@ class LiveSource {
         val list = ArrayList<CryptoCurrencies>()
 
 
-        var response = get("https://api.coincap.io/v2/assets")
+        val response = get("https://api.coincap.io/v2/assets")
 
         if (response.isSuccessful){
 
-            var data = JSONObject(response.body).getJSONArray("data")
+            val data = JSONObject(response.body).getJSONArray("data")
 
             for (i in 0 until data.length()){
 
