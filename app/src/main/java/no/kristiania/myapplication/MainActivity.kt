@@ -62,3 +62,4 @@ class MainActivity : AppCompatActivity(),OnCryptoClickListener {
         startActivity(intent) }
 
 }
+
