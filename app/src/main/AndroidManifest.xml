@@ -12,8 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SellActivity"></activity>
-        <activity android:name=".BuyActivity" />
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/SplashScreenTheme">
@@ -25,6 +23,8 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".ScreenFourActivity" />
+        <activity android:name=".SellActivity"></activity>
+        <activity android:name=".BuyActivity" />
     </application>
 
 </manifest>

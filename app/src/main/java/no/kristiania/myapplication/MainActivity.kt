@@ -61,6 +61,4 @@ class MainActivity : AppCompatActivity(),OnCryptoClickListener {
         intent.putExtra("id", crypto[position].name)
         startActivity(intent) }
 
-
-
 }
