@@ -13,6 +13,36 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+    <ImageView
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/symbolImg"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+
+        android:id="@+id/cryptoDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/hardcoded_text"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <TextView
             android:text="@string/usd"
@@ -23,7 +53,7 @@
 
         <EditText
             android:id="@+id/editUSD"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:hint="@string/usd_value"
             android:layout_height="wrap_content"
             style="@style/edit_text_style" />
@@ -31,8 +61,8 @@
 </LinearLayout>
 
     <LinearLayout
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="35dp"
         android:layout_marginRight="16dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -45,25 +75,50 @@
 
         </TextView>
 
-        <EditText
-            android:id="@+id/editCrypto"
-            android:inputType="number"
+        <TextView
+            android:id="@+id/textCrypto"
+            tools:text ="30"
+            android:textColor="@color/black"
             android:layout_marginLeft="16dp"
-            android:hint="@string/crypto_value"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/edit_text_style" />
 
     </LinearLayout>
 
+
+
     <Button
         android:enabled="false"
         android:layout_gravity="center_horizontal"
         android:text="@string/buy"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/buyNow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
 
+    <LinearLayout
 
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_back"
+        >
+
+
+        <TextView
+            android:text="@string/youhave"
+            android:layout_height="200dp"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="90sp"
+            android:layout_marginStart="70sp"
+            android:textColor="@color/black">
+        </TextView>
+
+
+
+</LinearLayout>
 </LinearLayout>

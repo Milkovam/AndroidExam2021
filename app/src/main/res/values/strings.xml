@@ -10,4 +10,6 @@
 
     <string name="buy">BUY</string>
     <string name="sell">SELL</string>
+    <string name="youhave">You have_______________,value teksten slettes når vi får db på plass</string>
+    <string name="hardcoded_text">Hardcoded text</string>
 </resources>
