@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">CryptoCurrencies Eksamen PGR208-1V</string>
+    <string name="usd">USD</string>
+
+    <string name="crypto">Crypto</string>
+
+    <string name="crypto_value">Crypto value</string>
+
+    <string name="usd_value">USD value</string>
+
+    <string name="buy">BUY</string>
+    <string name="sell">SELL</string>
 </resources>
