@@ -18,6 +18,6 @@ interface TransactionDAO{
     suspend fun delete(transaction: Transaction)
 
     @Query("select * from transaction_table order by id")
-    suspend fun fetchData() : List<Transaction>
+    suspend fun fetchAll() : List<Transaction>
 
 }

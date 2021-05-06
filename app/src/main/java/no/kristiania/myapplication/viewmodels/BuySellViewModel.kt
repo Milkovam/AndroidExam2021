@@ -36,4 +36,8 @@ class BuySellViewModel : ViewModel() {
         }
 
     }
+
+    fun onChange(){
+
+    }
 }

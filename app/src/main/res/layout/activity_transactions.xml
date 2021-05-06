@@ -9,17 +9,16 @@
 
     <androidx.recyclerview.widget.RecyclerView
 
-        tools:listitem="@layout/item_transactions_view"
-        android:layout_margin="8dp"
         android:id="@+id/recyclerView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.494"
+        tools:listitem="@layout/item_transactions_view" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

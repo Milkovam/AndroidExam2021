@@ -11,7 +11,10 @@ import com.squareup.picasso.Picasso
 import no.kristiania.myapplication.listeners.OnCryptoClickListener
 
 
-class CryptoCurrenciesListAdapter (private var list: List <CryptoCurrencies>,private val onCryptoClickListener: OnCryptoClickListener) : RecyclerView.Adapter<CryptoCurrenciesListAdapter.CryptoViewHolder>(){
+class CryptoCurrenciesListAdapter (private var list: List <CryptoCurrencies>,
+                                   private val onCryptoClickListener:
+                                   OnCryptoClickListener)
+    : RecyclerView.Adapter<CryptoCurrenciesListAdapter.CryptoViewHolder>(){
     override fun onCreateViewHolder(
             parent: ViewGroup,
             viewType: Int): CryptoViewHolder {

@@ -29,6 +29,12 @@ class MainActivity : AppCompatActivity(),OnCryptoClickListener {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val button = binding.btnTop
+        button.setOnClickListener{
+            val intent = Intent(this, ScreenThreeActivity::class.java)
+            startActivity(intent)
+        }
+
         listAdapter = CryptoCurrenciesListAdapter(ArrayList<CryptoCurrencies>(),this)
 
 

@@ -19,23 +19,26 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:padding="50dp"
         android:text="Your total current points are the sum of current value of all of yuor currencies in USD"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/s_transactionContainer"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView2"
+        android:id="@+id/s_transactionContainer"
         android:layout_width="wrap_content"
         android:layout_height="300dp"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:listitem="@layout/item_cryptocurrencies_view" />
+        tools:listitem="@layout/item_transactions_view" />
 
     <Button
         android:id="@+id/button3"

@@ -1,7 +1,11 @@
 package no.kristiania.myapplication.fragments
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
 import android.view.View
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import no.kristiania.myapplication.R
@@ -14,16 +18,11 @@ class TransactionFragment : Fragment(R.layout.activity_buy) {
     private lateinit var binding : ActivityBuyBinding
     private val viewModel : BuySellViewModel by viewModels()
 
-    private var coinName: String? = null
 
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        if(arguments != null){
-            coinName = requireArguments().getString(coinName)
-        }
 
         binding = ActivityBuyBinding.bind(view)
 
@@ -31,34 +30,43 @@ class TransactionFragment : Fragment(R.layout.activity_buy) {
 
         initViewListeners()
 
+/*        val usdEdit = activity?.findViewById<TextView>(R.id.editUSD)
+        val listenUsdEdit = usdEdit?.addTextChangedListener(textWatcher)
+        val cryptoText = activity?.findViewById<TextView>(R.id.textCrypto)
+        if (cryptoText != null) {
+            cryptoText.text = listenUsdEdit.toString()
+        }*/
     }
 
     private fun initViewListeners(){
         with(binding){
-            //val amountCoin = parseInt(coinPrice.toString()) / parseInt(editUSD.toString())
+
+            val coinName = requireActivity().findViewById<TextView>(R.id.cryptoDescription).text
+
             buyNow.setOnClickListener{
                 viewModel.saveDate(
                     parseInt(editUSD.text.toString()),
-                    33.23123123122,
+                    2323.232,
                     coinName.toString(),
                     bought = true)
+                Log.d("saved", "saved to DB")
 
             }
         }
     }
+    var textWatcher = object : TextWatcher {
+        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
-    companion object{
-        private val coinName = "coinName"
+        }
 
-        fun newInstance(nameOfCoin: String): TransactionFragment{
-            val fragment = TransactionFragment()
-            val args = Bundle()
-            args.putString(coinName, nameOfCoin)
-            fragment.arguments = args
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
 
-            return fragment
+        }
+
+        override fun afterTextChanged(s: Editable?) {
 
         }
     }
 
 }
+

@@ -37,7 +37,7 @@ class SellActivity : AppCompatActivity() {
         /// GET VALUE FROM DATABASE FIRST. AND THEN CALCULATE NOT THE OTHER WAY AROUND :D
     }
 
-    var textWatcher = object : TextWatcher {
+    private var textWatcher = object : TextWatcher {
 
         override fun afterTextChanged(s: Editable?) {
 

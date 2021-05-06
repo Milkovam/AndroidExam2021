@@ -10,7 +10,7 @@ import no.kristiania.myapplication.models.CryptoCurrencies
 import no.kristiania.myapplication.repos.CryptoRepo
 
 class MainViewModel : ViewModel(){
-    val liveStats = MutableLiveData<List<CryptoCurrencies>>(ArrayList<CryptoCurrencies>())
+    val liveStats = MutableLiveData<List<CryptoCurrencies>>()
     private var repo = CryptoRepo()
 
     fun refresh() {
