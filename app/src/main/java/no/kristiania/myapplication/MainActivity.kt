@@ -21,7 +21,6 @@ import java.io.Serializable
 class MainActivity : AppCompatActivity(),OnCryptoClickListener {
 
 
-    //private var cryptoList = arrayListOf<CryptoCurrencies>()
     private lateinit var listAdapter: CryptoCurrenciesListAdapter
     private val viewModel = MainViewModel()
 
@@ -57,8 +56,9 @@ class MainActivity : AppCompatActivity(),OnCryptoClickListener {
     override fun onCryptoItemClicked( position: Int) {
 
         val crypto = listAdapter.giveList()
-        var intent= Intent(this, ScreenFourActivity::class.java)
-        intent.putExtra("id", crypto[position].name)
+
+        val intent= Intent(this, ScreenFourActivity::class.java)
+        intent.putExtra("id", crypto[position])
         startActivity(intent) }
 
 }

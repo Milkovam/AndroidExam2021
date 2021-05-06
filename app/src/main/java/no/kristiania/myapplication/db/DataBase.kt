@@ -6,12 +6,13 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import no.kristiania.myapplication.db.entities.Account
+import no.kristiania.myapplication.db.entities.Transaction
 
-const val DATABASE_NAME: String = "account_database"
+const val DATABASE_NAME: String = "transaction_database"
 
-@Database(entities = [Account::class], version = 1)
+@Database(entities = [Transaction::class], version = 1)
 abstract class DataBase: RoomDatabase(){
-    abstract fun getAccountDAO() : AccountDAO
+    abstract fun getTransactionDAO() : TransactionDAO
 
     companion object{
         var db : DataBase? = null

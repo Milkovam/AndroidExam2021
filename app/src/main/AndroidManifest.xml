@@ -24,7 +24,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".ScreenFourActivity" />
         <activity android:name=".SellActivity" />
-        <activity android:name=".BuyActivity" />
+        <activity android:name=".fragments.TransactionFragment" />
         <activity android:name=".TransactionsActivity" />
     </application>
 

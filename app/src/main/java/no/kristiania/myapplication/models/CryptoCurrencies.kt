@@ -1,9 +1,13 @@
 package no.kristiania.myapplication.models
 
-import android.text.Editable
 import java.io.Serializable
 
 
-data class CryptoCurrencies (var symbol:String, var name:String, var priceUsd:Int, var changePercent24Hr:Int, var id:String)
+data class CryptoCurrencies(
+    var symbol:String,
+    var name:String,
+    var priceUsd: Float,
+    var changePercent24Hr: Float,
+    var id:String) : Serializable
 
 

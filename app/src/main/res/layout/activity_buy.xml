@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BuyActivity">
+    tools:context=".fragments.TransactionFragment">
 
     <LinearLayout
         android:layout_marginLeft="16dp"
@@ -22,16 +22,24 @@
         android:scaleType="centerCrop"
         android:src="@mipmap/ic_launcher" />
 
-    <TextView
+        <TextView
+            android:id="@+id/coinPrice"
+            android:layout_width="0dp"
+            android:layout_height="61dp"
+            android:layout_weight="1"
+            android:text="TextView" />
 
-        android:id="@+id/cryptoDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="25dp"
-        android:text="@string/hardcoded_text"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        <TextView
+
+            android:id="@+id/coinName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/hardcoded_text"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
 
@@ -53,12 +61,12 @@
 
         <EditText
             android:id="@+id/editUSD"
-            android:layout_marginStart="16dp"
-            android:hint="@string/usd_value"
+            style="@style/edit_text_style"
             android:layout_height="wrap_content"
-            style="@style/edit_text_style" />
+            android:layout_marginStart="16dp"
+            android:hint="@string/usd_value" />
 
-</LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_marginLeft="20dp"
@@ -109,16 +117,14 @@
 
 
         <TextView
-            android:text="@string/youhave"
-            android:layout_height="200dp"
             android:layout_width="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginTop="90sp"
+            android:layout_height="200dp"
             android:layout_marginStart="70sp"
-            android:textColor="@color/black">
-        </TextView>
+            android:layout_marginTop="90sp"
+            android:text="@string/youhave"
+            android:textColor="@color/black"
+            android:textSize="20sp"></TextView>
 
 
-
-</LinearLayout>
+    </LinearLayout>
 </LinearLayout>
