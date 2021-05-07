@@ -1,10 +1,8 @@
 package no.kristiania.myapplication.adapters
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import no.kristiania.myapplication.databinding.ActivityMainBinding
 import no.kristiania.myapplication.databinding.ItemCryptocurrenciesViewBinding
 import no.kristiania.myapplication.models.CryptoCurrencies
 import com.squareup.picasso.Picasso

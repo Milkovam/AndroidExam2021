@@ -7,16 +7,6 @@ import no.kristiania.myapplication.databinding.ActivityScreen3Binding
 import no.kristiania.myapplication.db.TransactionDAO
 
 class ScreenThreeActivity : AppCompatActivity() {
-    
-
-
-
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-
-
-
-    }
 
 
 }
