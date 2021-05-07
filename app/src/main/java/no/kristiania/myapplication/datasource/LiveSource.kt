@@ -24,8 +24,8 @@ class LiveSource {
                     CryptoCurrencies(
                         data.getJSONObject(i).getString("symbol"),
                         data.getJSONObject(i).getString("name"),
-                        data.getJSONObject(i).getLong("priceUsd").toFloat(),
-                        data.getJSONObject(i).getLong("changePercent24Hr").toFloat(),
+                        data.getJSONObject(i).getInt("priceUsd"),
+                        data.getJSONObject(i).getInt("changePercent24Hr"),
                         data.getJSONObject(i).getString("id")
 
                     ))

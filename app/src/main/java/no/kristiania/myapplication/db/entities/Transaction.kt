@@ -13,7 +13,7 @@ data class Transaction(
     @ColumnInfo(name = "amountUSD")
     val amountUSD: Int,
     @ColumnInfo(name = "amountCoin")
-    val amountCoin: Double,
+    val amountCoin: Int,
     @ColumnInfo(name = "coin")
     val coin: String,
     @ColumnInfo(name = "bought")

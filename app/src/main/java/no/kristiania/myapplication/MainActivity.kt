@@ -3,20 +3,13 @@ package no.kristiania.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
-import androidx.lifecycle.ViewModel
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import no.kristiania.myapplication.adapters.CryptoCurrenciesListAdapter
 import no.kristiania.myapplication.databinding.ActivityMainBinding
-import no.kristiania.myapplication.datasource.DummySource
-import no.kristiania.myapplication.datasource.LiveSource
-import no.kristiania.myapplication.datasource.retrofit.CryptoApiClient
 import no.kristiania.myapplication.listeners.OnCryptoClickListener
 import no.kristiania.myapplication.models.CryptoCurrencies
 import no.kristiania.myapplication.viewmodels.MainViewModel
-import java.io.Serializable
 
 class MainActivity : AppCompatActivity(),OnCryptoClickListener {
 

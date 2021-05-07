@@ -1,6 +1,5 @@
 package no.kristiania.myapplication.repos
 
-import no.kristiania.myapplication.datasource.DummySource
 import no.kristiania.myapplication.datasource.LiveSource
 import no.kristiania.myapplication.models.CryptoCurrencies
 

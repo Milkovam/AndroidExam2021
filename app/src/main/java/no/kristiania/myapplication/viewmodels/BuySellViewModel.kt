@@ -23,7 +23,7 @@ class BuySellViewModel : ViewModel() {
         Log.d("database", "database is goood")
     }
 
-    fun saveDate(amountUSD: Int, amountCoin: Double, coin: String, bought: Boolean){
+    fun saveDate(amountUSD: Int, amountCoin: Int, coin: String, bought: Boolean){
         viewModelScope.launch {
             if(coin.isNotEmpty()){
                 transactionDao.insert(Transaction(

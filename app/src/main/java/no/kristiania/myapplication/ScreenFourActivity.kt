@@ -1,16 +1,12 @@
 package no.kristiania.myapplication
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.commit
 import com.squareup.picasso.Picasso
 import no.kristiania.myapplication.fragments.BuyOrSellFragment
-import no.kristiania.myapplication.fragments.TransactionFragment
 import no.kristiania.myapplication.models.CryptoCurrencies
 
 
